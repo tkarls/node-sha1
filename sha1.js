@@ -79,4 +79,5 @@
   api._digestsize = 20;
 
   module.exports = api;
+  module.exports.sha1 = api;
 })();

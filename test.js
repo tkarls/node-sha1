@@ -6,6 +6,10 @@ describe('sha1', function () {
     assert.equal('6f9b9af3cd6e8b8a73c2cdced37fe9f59226e27d', sha1('message'));
   });
 
+  it ('should be possible to use a named attribute as the sha1 function"', function () {
+    assert.equal('6f9b9af3cd6e8b8a73c2cdced37fe9f59226e27d', sha1.sha1('message'));
+  });
+
   it('should not return the same hash for random numbers twice', function () {
     var msg1 = Math.floor((Math.random() * 100000) + 1) + (new Date).getTime();
     var msg2 = Math.floor((Math.random() * 100000) + 1) + (new Date).getTime();
